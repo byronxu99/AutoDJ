@@ -13,7 +13,7 @@ Based on [midiAutoDJ by Sophia Herzog](https://www.mixxx.org/forums/viewtopic.ph
 ## Example
 ![Screenshot](https://i.imgur.com/l6s0cXE.png)
 
-A transition from the song on the right (160bpm, Bb Major) to the song on the left (90bpm, D minor). Every two beats on the right is matched to one on the left, and the exit cue on the right is aligned with the entrance cue on the left. As the cues are approached, the tempo changes smoothly while the beats are synchronized. The screenshot shows this change in progress. At the same time, the EQ knobs are adjusted, fading out the bass of the old song and fading in that of the new song.
+A transition from the song on the right (160bpm, Bb Major) to the song on the left (90bpm, D minor). Every two beats on the right is matched to one on the left, and the exit cue on the right is aligned with the entrance cue on the left. As the cues are approached, the tempo increases smoothly to the tempo of the new song, while the beats remain synchronized. The screenshot shows this change in progress. At the same time, the EQ knobs are adjusted, fading out the bass of the old song and fading in that of the new song.
 
 ## Usage Info
 Mixxx allows arbitrary Javascript code to be loaded for the purpose of interfacing between MIDI controllers and internal variables. This script is executed by Mixxx through being binded to a "fake" MIDI controller. (Alternatively, a real MIDI keyboard can also be used, skipping the first step below. This will require attaching the device to your computer whenever you wish to use this script.)
@@ -26,6 +26,7 @@ Steps:
 1. When the Auto DJ feature of Mixxx is enabled, this script will be automatically executed.
 
 ### Tips
+* Edit the script to customize some settings.
 * In the Mixxx Auto DJ controls, adjust the transition duration. The default value of 10 seconds is a bit long. I've found that 6-8 seconds is better.
 * More options are available in the Options > Preferences > Auto DJ menu. For some information, see [here](https://blueprints.launchpad.net/mixxx/+spec/auto-dj-crates).
 * Try adjusting the crossfader settings between additive mode and constant power mode. You may prefer one over the other.
